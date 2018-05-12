@@ -1461,6 +1461,7 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
 .categories{
   background-color: rgba(0,0, 0, 0.7);
   padding: 0;
+  padding-bottom: 100%;
 }
 
 .categories a {
@@ -1476,6 +1477,7 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
   width: 100%;
   height: 100%;
   padding-left: 0;
+  text-align: center;
 }
 
 .categories ul li {
@@ -1495,7 +1497,7 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
 }
 
 .rowfordish{
-  height: 35vw;
+  height: auto;
 }
 
 .carcasfordish{
@@ -1506,14 +1508,41 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
   height: 100%;
   width: 100%;
   background-color: #ffffff;
-  //margin-left: 5%;
-  //margin-right: 5%;
+  padding-bottom: 3%;
+  border-radius: 5%;
 }
 
 .dish h3, .dish p{
   margin: 3%;
 }
 
+.dish h3{
+  text-align: center;
+}
+
 .dish p {
   font-style: italic;
+}
+
+.characteristic div{
+  padding-left: 9%;
+  font-size: 0.9em;
+}
+
+.namecharacteristic{
+  font-size: 0.9em;
+  font-size: 0.9em;
+}
+
+
+.ingredients{
+  text-align: center;
+}
+
+.price h4{
+  width: 100%;
+  text-align: center;
+  margin-left: 50%;
+  margin-top: 5%;
+  transform: translateX(-50%);
 }

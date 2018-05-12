@@ -49,18 +49,28 @@
               <div class = 'dish '>
                 <%= image_tag(product.image_url, class: 'image_prod') if product.image? %>
                 <h3 class="name-dish"><%= product.name %></h3>
-                <p><%= product.ingredients %></p>
-                <div class="row">
-                  <div class="col-md-4"><p>Жиры</p></div>
-                  <div class="col-md-4"><p>Углеводы</p></div>
-                  <div class="col-md-4"><p>Каллории</p></div>
+                <p class="ingredients"><%= product.ingredients %></p>
+                <div class="row namecharacteristic">
+                  <div class="col-md-6"><p>Жиры</p></div>
+                  <div class="col-md-6"><p>Белки</p></div>
                 </div>
-                <div class="row">
-                  <div class="col-md-4"><%= product.grease %></div>
-                  <div class="col-md-4"><%= product.proteins %></div>
-                  <div class="col-md-4"><%= product.calories %></div>
+                <div class="row characteristic">
+                  <div class="col-md-6"><%= product.grease %> г.</div>
+                  <div class="col-md-6 "><%= product.proteins %> г.</div>
                 </div>
-                <span><%= product.price %></span>
+                <div class="row namecharacteristic">
+                  <div class="col-md-6"><p>Углеводы</p></div>
+                  <div class="col-md-6"><p>Каллории</p></div>
+                </div>
+                <div class="row characteristic">
+                  <div class="col-md-6 ">hello
+                    <%# product.carbohydrates %>
+                  </div>
+                  <div class="col-md-6 "><%= product.calories %> г.</div>
+                </div>
+                <div class="price">
+                <h4><%= product.price %> руб.</h4>
+                </div>
                 <% if user_signed_in? %>
                   <% if current_user.admin? %>
                       <button class="button7 buy">

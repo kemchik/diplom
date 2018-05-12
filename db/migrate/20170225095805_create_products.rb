@@ -7,6 +7,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.float :weight
       t.float :calories
       t.float :grease
+      t.float :carbohydrates
       t.float :proteins
       t.float :price, nil: false
       t.integer :category_id

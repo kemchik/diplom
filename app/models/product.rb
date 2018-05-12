@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :comments
   validates :name, :price, presence: true
-  validates :price, :weight, :calories, :grease, :proteins, :numericality => {:greater_than => 0}
+  validates :price, :weight, :calories, :grease, :carbohydrates, :proteins, :numericality => {:greater_than => 0}
   validates :name, uniqueness: { scope: :category_id }
   mount_uploader :image, ImageUploader
 
