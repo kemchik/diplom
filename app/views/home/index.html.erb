@@ -1,0 +1,84 @@
+<div class="row">
+  <div class = 'categories col-md-2' >
+    <ul>
+      <% @category.each do |category| %>
+      <a href = '#<%category.name%>'><li><%= category.name %>
+          <% if user_signed_in? %>
+          <% if current_user.admin? %>
+          <br>
+            <%= link_to 'Update', category_path(category) %>
+
+            <%= link_to 'Destroy', category_path(category), method: :delete, data: {confirm: 'Are you sure?'} %>
+
+          <br>
+          <% end %>
+          <% end %>
+        <% end %>
+      </li></a>
+    </ul>
+    <% if user_signed_in? %>
+      <% if current_user.admin? %>
+               <%= link_to 'New category', new_category_path %>
+
+<!--            <button class="bottom-aligned buy">-->
+              <%#= link_to 'Скачать данные в Excel', download_index_path(category_id: @category_id, format: 'xls') %>
+<!--            </button>-->
+<!--            <button class="bottom-aligned buy">-->
+              <%#= link_to 'Скачать данные в csv', download_index_path(category_id: @category_id, format: 'csv') %>
+<!--            </button>-->
+<!--            <h2>Импортировать продукты</h2>-->
+<!--            <div class="col-xs-1"></div>-->
+<!--            <div class="col-xs-4">-->
+              <%#= form_tag import_products_path(category_id: @category_id), multipart: true do %>
+                <%#= file_field_tag :file %>
+<!--                <br>-->
+                <%#= submit_tag 'Import' %>
+              <%# end %>
+<!--              <br>-->
+<!--            </div>-->
+      <% end %>
+    <% end %>
+  </div>
+  <div class="dishes col-md-10">
+    <% @category.each do |category| %>
+      <% @product = category.products %>
+      <h3><%= category.name %></h3>
+      <div class="row rowfordish">
+          <% @product.each do |product| %>
+            <div class = 'carcasfordish col-md-4'>
+              <div class = 'dish '>
+                <%= image_tag(product.image_url, class: 'image_prod') if product.image? %>
+                <h3 class="name-dish"><%= product.name %></h3>
+                <p><%= product.ingredients %></p>
+                <div class="row">
+                  <div class="col-md-4"><p>Жиры</p></div>
+                  <div class="col-md-4"><p>Углеводы</p></div>
+                  <div class="col-md-4"><p>Каллории</p></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4"><%= product.grease %></div>
+                  <div class="col-md-4"><%= product.proteins %></div>
+                  <div class="col-md-4"><%= product.calories %></div>
+                </div>
+                <span><%= product.price %></span>
+                <% if user_signed_in? %>
+                  <% if current_user.admin? %>
+                      <button class="button7 buy">
+                        <%= link_to 'Update', edit_category_product_path(category, product) %>
+                      </button>
+                      <button class='button7 buy'>
+                        <%= link_to 'Destroy', category_product_path(category, product), method: :delete, data: {confirm: 'Are you sure?'} %>
+                      </button>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+      <button class="bottom-aligned buy">
+        <%= link_to 'New product', new_category_product_path(category.id) %>
+      </button>
+    <% end %>
+
+  </div>
+</div>

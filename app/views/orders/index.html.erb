@@ -1,0 +1,73 @@
+<div style="min-height: 40em">
+<h1 class="text-center">Корзина</h1>
+<br>
+<hr>
+<% sum = 0.0 %>
+<% sum_one = 0.0  %>
+<% if @order != nil %>
+<% @order.each do |order| %>
+
+    <div class="row">
+      <div class='col-xs-4'>
+        <%= image_tag(order.product.image_url, class: 'image_prod') %>
+      </div>
+      <div class="col-xs-8">
+        <div>
+          <h2 style = "font-style: italic"> <%= order.product.name %> </h2>
+        </div>
+        <div>
+          <h3>Ингридиенты</h3>
+          <p style = "font-style: italic">
+            <%= order.product.ingredients %>
+          <p>
+        </div>
+        <div class="col-xs-2">
+          <h5 class="text-center">Вес</h5>
+          <p class="text-center" style = "font-style: italic"><%= order.product.weight %> кг.</p>
+        </div>
+        <div class="col-xs-3">
+          <h5 class="text-center">Калорийность(в 100 г)</h5>
+          <p class="text-center" style = "font-style: italic"><%= order.product.calories %> ккал.</p>
+        </div>
+        <div class="col-xs-3">
+          <h5 class="text-center">Цена</h5>
+          <p class="text-center" style = "font-style: italic"><%= order.product.price %> руб.</p>
+        </div>
+        <div class="col-xs-3">
+          <h5 class="text-center">Количество</h5>
+          <p class="text-center" style = "font-style: italic"><%= order.amount %></p>
+        </div>
+
+        <div class="col-xs-3">
+          <h4 class="text-center">Итоговая сумма:</h4>
+          <h4 class="text-center" style = "font-style: italic"><%= sum_one = order.product.price*order.product.amount %> руб.</h4>
+        </div>
+        <div class="col-xs-6 buy text-center buy7">
+          <br>
+          <br>
+          <%= link_to 'Просмотреть', product_comments_path(order.product.id) %>
+        </div>
+        <div class="col-xs-3 buy2">
+          <br>
+          <% if user_signed_in? %>
+              <%= link_to 'Удалить', order_path(order), method: :delete, data: {confirm: 'Are you sure?'} %>
+              <% else %>
+          <%= link_to 'Удалить', order_path(order.product.id), method: :delete, data: {confirm: 'Are you sure?'} %>
+          <%end %>
+        </div>
+        <% sum += sum_one %>
+      </div>
+    </div>
+    <hr>
+<% end %>
+<%end %>
+<h2 class="text-right" style = "font-style: italic">Итого: <%= sum %> руб.</h2>
+<div class="col-xs-5"></div>
+<% if @order != nil %>
+<div class="col-xs-2 buy">
+  <button class="button"><%= link_to 'Купить', new_customer_path %></button>
+</div>
+<br><br>
+<%end%>
+</div>
+</div>

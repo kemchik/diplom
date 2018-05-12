@@ -1,0 +1,109 @@
+<div style="min-height: 50em">
+<h1 class="text-center" style = "font-style: italic"><%= @category.name %></h1>
+<% @sort_d = true %>
+<% @sort = true %>
+<div class="row">
+  <div class="col-xs-1"></div>
+  <div class="col-xs-8 buy2">
+    <li><h3 ><%= link_to 'Назад' , root_path %></h3></li>
+  </div>
+  <div class="col-xs-3 sortirovka">
+    <li class="dropdown" >
+      <a id="drop1" href="#" class="dropdown-toggle " data-toggle="dropdown">
+        <h3 style="color: #B00100">Сортировать</h3>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><%= link_to 'от большей цены к меньшей', category_products_path(@category.id, sort: @sort) %></a></li>
+        <li><a href="#"><%= link_to 'от меньшей цены к большей', category_products_path(@category.id, sort_d: @sort_d) %></a></li>
+        <li class="divider"></li>
+      </ul>
+    </li>
+  </div>
+</div>
+<hr style="border-top: 1px solid #000000;">
+    <% @products.each do |product| %>
+        <div class="row">
+          <div class='col-xs-4'>
+            <br>
+            <%= image_tag(product.image_url, class: 'image_prod') if product.image? %>
+          </div>
+          <div class="col-xs-8">
+            <div>
+              <h2 class="text-center" style = "font-style: italic";> <%= product.name %> </h2>
+            </div>
+            <div>
+              <h3>Ингредиенты</h3>
+              <p style = "font-style: italic">
+                <%= product.ingredients %>
+              <p>
+            </div>
+
+            <div class="col-xs-3">
+              <h5 class="text-center">Вес</h5>
+              <p class="text-center" style = "font-style: italic"><%= product.weight %> кг.</p>
+            </div>
+            <div class="col-xs-3">
+              <h5 class="text-center">Калорийность(в 100 г)</h5>
+              <p class="text-center" style = "font-style: italic"><%= product.calories %> ккал.</p>
+            </div>
+            <div class="col-xs-3">
+              <h5 class="text-center">Цена</h5>
+              <p class="text-center" style = "font-style: italic"><%= product.price %> руб.</p>
+            </div>
+            <div class="col-xs-3">
+              <%= link_to image_tag('basket.png', class: 'backet'), new_product_order_path(product) %>
+            </div>
+            <div class="buy text-center buy7">
+              <%= link_to 'Просмотреть', product_comments_path(product) %>
+            </div>
+          </div>
+          <% if user_signed_in? %>
+              <% if current_user.admin? %>
+                  <div class="col-xs-1"></div>
+                    <div class="col-xs-4">
+                      <button class="button7 buy">
+                        <%= link_to 'Update', edit_category_product_path(@category, product) %>
+                      </button>
+                      <button class='button7 buy'>
+                        <%= link_to 'Destroy', category_product_path(@category, product), method: :delete, data: {confirm: 'Are you sure?'} %>
+                      </button>
+                    <br>
+                  </div>
+              <% end %>
+          <% end %>
+      </div>
+        <hr style="border-top: 1px solid #000000;">
+    <% end %>
+
+
+<% if user_signed_in? %>
+    <% if current_user.admin? %>
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class=class="col-xs-4">
+        <button class="bottom-aligned buy">
+          <%= link_to 'New product', new_category_product_path %>
+          </button>
+          <button class="bottom-aligned buy">
+          <%= link_to 'Скачать данные в Excel', download_index_path(category_id: @category_id, format: 'xls')%>
+            </button>
+            <button class="bottom-aligned buy">
+            <%= link_to 'Скачать данные в csv', download_index_path(category_id: @category_id, format: 'csv')%>
+        </button>
+          <h2>Импортировать продукты</h2>
+          <div class="col-xs-1"></div>
+          <div class="col-xs-4">
+          <%= form_tag import_products_path(category_id: @category_id), multipart: true do %>
+              <%= file_field_tag :file %>
+                <br>
+              <%= submit_tag 'Import' %>
+          <% end %>
+            <br>
+          </div>
+          <br>
+          <br>
+        </div>
+      </div>
+  <% end %>
+<% end %>
+</div>
