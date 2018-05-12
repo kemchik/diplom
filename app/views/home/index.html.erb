@@ -1,6 +1,8 @@
 <div class="row">
   <div class = 'categories col-md-2' >
     <ul>
+      <li class="namecategories">Категогрии</li>
+      <hr>
       <% @category.each do |category| %>
       <a href = '#<%category.name%>'><li><%= category.name %>
           <% if user_signed_in? %>
@@ -39,10 +41,16 @@
       <% end %>
     <% end %>
   </div>
+  <div class="formForCountPerson">
+    <span class="close">&times;</span>
+    <h5>Введите количество порций</h5>
+    <input type="number">
+    <button class="btn btn-warning">OK</button>
+  </div>
   <div class="dishes col-md-10">
     <% @category.each do |category| %>
       <% @product = category.products %>
-      <h3><%= category.name %></h3>
+      <h3 class="categoriesName"><%= category.name %></h3>
       <div class="row rowfordish">
           <% @product.each do |product| %>
             <div class = 'carcasfordish col-md-4'>
@@ -71,6 +79,7 @@
                 <div class="price">
                 <h4><%= product.price %> руб.</h4>
                 </div>
+                <button class="btn btn-warning">В заказ</button>
                 <% if user_signed_in? %>
                   <% if current_user.admin? %>
                       <button class="button7 buy">
@@ -85,9 +94,13 @@
             </div>
           <% end %>
       </div>
+      <% if user_signed_in? %>
+        <% if current_user.admin? %>
       <button class="bottom-aligned buy">
         <%= link_to 'New product', new_category_product_path(category.id) %>
       </button>
+          <% end %>
+        <% end %>
     <% end %>
 
   </div>

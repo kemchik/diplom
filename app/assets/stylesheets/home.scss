@@ -23,7 +23,7 @@
 }
 
 .fon{
-  background-color: #fff3b1;
+  background-color: rgba(0, 0, 0, 0.7);;
 }
 
 button7 {
@@ -1461,6 +1461,7 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
 .categories{
   background-color: rgba(0,0, 0, 0.7);
   padding: 0;
+  position: relative;
   padding-bottom: 100%;
 }
 
@@ -1473,11 +1474,20 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
   color: white;
 }
 
+.namecategories{
+  color: white;
+  font-size: 2em !important;
+}
+hr{
+  margin: 0;
+}
+
 .categories ul {
   width: 100%;
   height: 100%;
   padding-left: 0;
   text-align: center;
+  //position: fixed;
 }
 
 .categories ul li {
@@ -1504,12 +1514,25 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
   height: 100%;
 }
 
+.categoriesName{
+font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  color: white;
+
+}
+
 .dish{
   height: 100%;
   width: 100%;
   background-color: #ffffff;
   padding-bottom: 3%;
   border-radius: 5%;
+}
+
+.btn-warning:active{
+  background-color: #d58512;
 }
 
 .dish h3, .dish p{
@@ -1546,3 +1569,40 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
   margin-top: 5%;
   transform: translateX(-50%);
 }
+
+.formForCountPerson{
+  position: fixed;
+  //width: 40%;
+  height: auto;
+  padding: 7%;
+  background-color: white;
+  z-index: 20;
+  left: 50%;
+  top: 50%;
+  border: #0c1a1e double;
+  border-radius: 2%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.formForCountPerson h5{
+  font-size: 1.7em;
+  margin-bottom: 5%;
+}
+.formForCountPerson input {
+  width: 100%;
+  border: black 1px solid;
+}
+
+.close{
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+
+.formForCountPerson button{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4%;
+}
+
