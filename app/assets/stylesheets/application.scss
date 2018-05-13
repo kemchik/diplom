@@ -70,6 +70,7 @@ hr{
 
 .container{
   padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar-nav{
@@ -78,6 +79,12 @@ hr{
   float: right !important;
 }
 
+.autorisation, .registration{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
 
 
 
