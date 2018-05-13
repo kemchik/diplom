@@ -8,7 +8,7 @@
 <!--    </ul>-->
 
 
-      <ul class="pull-right nav navbar-nav">
+      <ul class="nav navbar-nav">
         <% if user_signed_in? %>
         <% if current_user.admin? %>
             <li> <%= link_to 'Заказы', admin_index_path %></li>
@@ -17,7 +17,7 @@
         <% if user_signed_in? %>
         <li><%= link_to 'Кабинет', office_index_path %></li>
         <% end %>
-        <li> <%= link_to 'Заказ', orders_path %>&#x270d;</li>
+        <li> <%= link_to 'Заказ', orders_path %></li>
 
       <% if user_signed_in? %>
           <li style="color: #F7F7F7">
