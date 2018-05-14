@@ -48,10 +48,17 @@
     <button class="btn btn-warning">OK</button>
   </div>
   <div class="dishes col-md-10">
-    <label class="container_checkbox ">Только вегетарианские блюда
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
+    <div class="row">
+      <div class="col-md-6">
+        <label class="container_checkbox ">Только вегетарианские блюда
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="col-md-6">
+        <%= link_to 'Подобрать заказ', root_path, :class => 'container_checkbox podobr_zakaz' %>
+      </div>
+    </div>
     <% @category.each do |category| %>
       <% @product = category.products %>
       <h3 class="categoriesName"><%= category.name %></h3>
@@ -81,7 +88,7 @@
                 <div class="price">
                 <h4><%= product.price %> руб.</h4>
                 </div>
-                <button class="btn btn-warning"><%= link_to 'В заказ', new_customer_order_path(product.id) %></button>
+                <button class="btn btn-warning"><%= link_to 'В заказ', new_customer_order_path(product) %></button>
                 <% if user_signed_in? %>
                   <% if current_user.admin? %>
                       <button class="btn btn-dark">
