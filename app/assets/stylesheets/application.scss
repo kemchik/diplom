@@ -46,24 +46,6 @@ body{
   background-repeat: no-repeat;
 }
 
-a{
-  color: #000;
-}
-
-
-
-a:hover{
-  color: #000;
-}
-
-a:active{
-  color: #000;
-}
-
-hr{
-  border-top: 1px solid #000000;
-}
-
 .main img{
   width: 60%;
 }
@@ -86,6 +68,36 @@ hr{
 
 }
 
+.navbar-inverse .navbar-nav > li > a{
+  color: #bdbbbb;
+}
 
+.forms{
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
 
+.forms .container{
+  margin-bottom: 2%;
+}
+
+.input {
+  color: #0c1a1e;
+  border-color: #eeeeee;
+}
+
+.categories_form{
+  padding-top: 15%;
+  margin-bottom: 15%;
+}
+
+a{
+  color: whites;
+}
+
+ a:hover,  a:active{
+  text-decoration: none;
+  color: white;
+}
 

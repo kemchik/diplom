@@ -1,17 +1,14 @@
 
-<div id="fh5co-type" style="background-image: url(<%= asset_path 'pech.jpg' %>) ; " data-stellar-background-ratio="0.5">
-  <div class="fh5co-overlay"></div>
-  <div class="container" >
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4">
+<div id="fh5co-type forms">
+  <div class="container categories_form" >
+    <div class="col-md-offset-4 col-md-4">
     <%= simple_form_for @category do |f| %>
         <p>
           <%= f.input :name,  input_html: { class: 'input' },  label_html: { class: 'label' } %>
         </p>
 
-
         <p class="text-center">
-          <%= f.submit 'Save', :class => 'save' %>
+          <%= f.submit 'Save', :class => 'btn btn-warning' %>
         </p>
     <% end %>
   </div>

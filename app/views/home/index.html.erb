@@ -8,9 +8,9 @@
           <% if user_signed_in? %>
           <% if current_user.admin? %>
           <br>
-            <%= link_to 'Update', category_path(category) %>
+            <%= link_to 'Update', category_path(category), :class => 'buttons_change' %>
 
-            <%= link_to 'Destroy', category_path(category), method: :delete, data: {confirm: 'Are you sure?'} %>
+            <%= link_to 'Destroy', category_path(category), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'buttons_change' %>
 
           <br>
           <% end %>
@@ -48,6 +48,10 @@
     <button class="btn btn-warning">OK</button>
   </div>
   <div class="dishes col-md-10">
+    <label class="container_checkbox ">Только вегетарианские блюда
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
     <% @category.each do |category| %>
       <% @product = category.products %>
       <h3 class="categoriesName"><%= category.name %></h3>
@@ -71,21 +75,19 @@
                   <div class="col-md-6"><p>Каллории</p></div>
                 </div>
                 <div class="row characteristic">
-                  <div class="col-md-6 ">hello
-                    <%# product.carbohydrates %>
-                  </div>
+                  <div class="col-md-6 "><%= product.carbohydrates %> г.</div>
                   <div class="col-md-6 "><%= product.calories %> г.</div>
                 </div>
                 <div class="price">
                 <h4><%= product.price %> руб.</h4>
                 </div>
-                <button class="btn btn-warning">В заказ</button>
+                <button class="btn btn-warning"><%= link_to 'В заказ', new_customer_order_path(product.id) %></button>
                 <% if user_signed_in? %>
                   <% if current_user.admin? %>
-                      <button class="button7 buy">
+                      <button class="btn btn-dark">
                         <%= link_to 'Update', edit_category_product_path(category, product) %>
                       </button>
-                      <button class='button7 buy'>
+                      <button class='btn btn-dark'>
                         <%= link_to 'Destroy', category_product_path(category, product), method: :delete, data: {confirm: 'Are you sure?'} %>
                       </button>
                   <% end %>
@@ -96,9 +98,9 @@
       </div>
       <% if user_signed_in? %>
         <% if current_user.admin? %>
-      <button class="bottom-aligned buy">
-        <%= link_to 'New product', new_category_product_path(category.id) %>
-      </button>
+            <button class="btn btn-warning new_product">
+              <%= link_to 'New product', new_category_product_path(category.id) %>
+            </button>
           <% end %>
         <% end %>
     <% end %>

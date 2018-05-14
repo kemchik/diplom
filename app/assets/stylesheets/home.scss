@@ -27,7 +27,8 @@
 }
 
 button7 {
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 0.9em;
   color: white;
   text-decoration: none;
   padding: .8em 1em calc(.8em + 3px);
@@ -123,20 +124,11 @@ button7 {
   padding-bottom: 40px;
 }
 
-a{
-  color: #fff3b1
-}
 
 .label{
   color: #eeeeee;
   font-size: inherit;
 }
-
-.input{
-  color: #eeeeee;
-  border-color: #eeeeee;
-}
-
 
 .button8{
   display: inline-block;
@@ -155,21 +147,10 @@ a.button8:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
 a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
 
 
-.buy a{
-  color: black;
-}
-.buy2 a{
-  color: #B00100;
-}
+
 
 .save{
   color: black;
-}
-
-
-.buy7 a{
-  color: #B00100;
-  font-style: italic;
 }
 
 .categories{
@@ -320,3 +301,100 @@ font-size: 2.5em;
   margin-top: 4%;
 }
 
+.dishes .row{
+  margin-right: 2%;
+}
+
+/* Customize the label (the container) */
+.container_checkbox {
+  display: block;
+  color: #bdbbbb;
+  margin-left: 3%;
+  margin-top: 3%;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_checkbox  input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 23px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container_checkbox :hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_checkbox  input:checked ~ .checkmark {
+  background-color: #f3e7be;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_checkbox  input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_checkbox  .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #e99136;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.buttons_change{
+  font-size: 0.7em;
+}
+
+.new_product{
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+a{
+  color: white;
+}
+
+.btn-dark{
+  background-color: #0c1a1e;
+  color: white;
+  font-size: 0.5em;
+}
+
+hr{
+  border-top-color: rgba(79, 79, 79, 0.97);
+
+}

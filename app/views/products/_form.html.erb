@@ -1,8 +1,8 @@
-<div id="fh5co-type" style="background-image: url(<%= asset_path 'pech.jpg' %>) ; " data-stellar-background-ratio="0.5">
-  <div class="fh5co-overlay"></div>
+<div id="fh5co-type" class="forms">
+
   <div class="container" >
-    <div class="col-xs-3"></div>
-    <div class="col-xs-5">
+    <div class="row">
+    <div class="col-md-offset-4 col-md-4">
     <%= simple_form_for [@category, @product] do |f| %>
         <p>
           <%= f.file_field :image %>
@@ -22,7 +22,7 @@
         </p>
 
         <p>
-          <%= f.input :calories, input_html: { class: 'input' },  label_html: { class: 'label' } %>
+          <%= f.input :proteins, input_html: {class: 'input'}, label_html: {class: 'label'} %>
         </p>
 
         <p>
@@ -30,7 +30,11 @@
         </p>
 
         <p>
-          <%= f.input :proteins, input_html: {class: 'input'}, label_html: {class: 'label'} %>
+          <%= f.input :calories, input_html: { class: 'input' },  label_html: { class: 'label' } %>
+        </p>
+
+        <p>
+          <%= f.input :carbohydrates, input_html: {class: 'input'}, label_html: {class: 'label'} %>
         </p>
 
 <!--        <p>-->
@@ -41,13 +45,11 @@
           <%= f.input :price, input_html: { class: 'input' },  label_html: { class: 'label' } %>
         </p>
 
-
-
         <p class="text-center">
-          <%= f.submit 'Save', :class => 'save' %>
+          <%= f.submit 'Save', :class => 'btn btn-warning' %>
         </p>
     <% end %>
     </div>
     </div>
   </div>
-
+<div>

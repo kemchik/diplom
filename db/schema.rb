@@ -66,14 +66,15 @@ ActiveRecord::Schema.define(version: 20170417204009) do
     t.string   "name"
     t.string   "image"
     t.string   "ingredients"
-    t.float    "weight",      limit: 24
-    t.float    "calories",    limit: 24
-    t.float    "grease",      limit: 24
-    t.float    "proteins",    limit: 24
-    t.float    "price",       limit: 24
+    t.float    "weight",        limit: 24
+    t.float    "calories",      limit: 24
+    t.float    "grease",        limit: 24
+    t.float    "carbohydrates", limit: 24
+    t.float    "proteins",      limit: 24
+    t.float    "price",         limit: 24
     t.integer  "category_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
