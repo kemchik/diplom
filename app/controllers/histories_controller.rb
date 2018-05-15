@@ -1,5 +1,5 @@
 class HistoriesController < ApplicationController
-  before_action :load_table, only: [:create]
+
 
   def index
     if user_signed_in?
@@ -50,8 +50,5 @@ class HistoriesController < ApplicationController
   def destroy
   end
 
-  def load_table
-    @table = Table.find(params[:table_id])
-  end
 
 end
