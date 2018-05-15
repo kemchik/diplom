@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
   before_action :load_product, only: [:new, :create]
 
     def index
+      @tables = Table.all
       if user_signed_in?
         @order = Order.where(user_id: current_user, status: nil)
       else

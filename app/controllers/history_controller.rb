@@ -1,5 +1,5 @@
 class HistoryController < ApplicationController
-  before_action :load_category
+  before_action :load_table, only: [:create]
 
   def index
     if user_signed_in?
@@ -24,7 +24,7 @@ class HistoryController < ApplicationController
   def create
 
     if user_signed_in?
-      @order = Order.where(user_id: current_user, status: 'send')
+      @order = Order.where(user_id: current_user, status: nil)
     else
       if session[:orders].blank?
         @order
@@ -40,18 +40,22 @@ class HistoryController < ApplicationController
       if user_signed_in?
         @history.user = current_user
         @history.order = order
-          if @history.save
-            redirect_to root_path
-          else
-          end
+        @history.save
       end
     end
+    # make table params
+    @order.update_all(table_id: @table.id, status: 'processing')
+    redirect_to root_path
   end
 
   def update
   end
 
   def destroy
+  end
+
+  def load_table
+    @table = Table.find(params[:id])
   end
 
 end

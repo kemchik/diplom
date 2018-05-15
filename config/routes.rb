@@ -23,7 +23,11 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+
+  get '/history/:id', to: 'history#create'
+
   resources :orders
+  resource :history
   resources :customers
 
   resources :customers do
