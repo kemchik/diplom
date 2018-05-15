@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
 
     def index
       @tables = Table.all
+      @history = History.new
       if user_signed_in?
         @order = Order.where(user_id: current_user, status: nil)
       else
@@ -25,7 +26,7 @@ class OrdersController < ApplicationController
         @order = @product.orders.build(order_params)
         @order.user = current_user
         if @order.save
-          redirect_to category_products_path(@product.category_id)
+          redirect_to root_path
         else
           render :new
         end

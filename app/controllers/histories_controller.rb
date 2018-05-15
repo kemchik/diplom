@@ -1,9 +1,9 @@
-class HistoryController < ApplicationController
+class HistoriesController < ApplicationController
   before_action :load_table, only: [:create]
 
   def index
     if user_signed_in?
-      @order = Order.where(user_id: current_user, status: nil)
+      @order = Order.where(user_id: current_user, status: 'processing')
     else
       if session[:orders].blank?
         @order
@@ -18,11 +18,7 @@ class HistoryController < ApplicationController
   def show
   end
 
-  def new
-  end
-
   def create
-
     if user_signed_in?
       @order = Order.where(user_id: current_user, status: nil)
     else
@@ -55,7 +51,7 @@ class HistoryController < ApplicationController
   end
 
   def load_table
-    @table = Table.find(params[:id])
+    @table = Table.find(params[:table_id])
   end
 
 end

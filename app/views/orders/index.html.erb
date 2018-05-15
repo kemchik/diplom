@@ -68,43 +68,32 @@
   <div class="row rezalt">
     <div class="col-md-3">
       <h3>Белков</h3>
-      <p><%= sum_proteins %> г.</p>
+      <p><%= sum_proteins.round(2) %> г.</p>
     </div>
     <div class="col-md-3">
       <h3>Жиров</h3>
-      <p><%= sum_fats %> г.</p>
+      <p><%= sum_fats.round(2) %> г.</p>
     </div>
     <div class="col-md-3">
       <h3>Углеводов</h3>
-      <p><%= sum_carbohydrates %> г.</p>
+      <p><%= sum_carbohydrates.round(2) %> г.</p>
     </div>
     <div class="col-md-3">
       <h3>Колорий</h3>
-      <p><%= sum_calories %> г.</p>
+      <p><%= sum_calories.round(2) %> г.</p>
     </div>
   </div>
   <div class="row rezalt">
     <div class="col-md-offset-8 col-md-4 ">
      <h2>Стоимость</h2>
-      <p><%= sum %> руб.</p>
+      <p><%= sum.round(2) %> руб.</p>
     </div>
   </div>
 
     <% if @order != nil %>
-<!--    <div class="col-md-offset-5 col-md-2">-->
-      <%#= link_to 'Заказать', customer_path(), :class => 'btn btn-warning' %>
-<!--    </div>-->
+      <div class="col-md-offset-5 col-md-2">
+        <%= link_to 'Заказать', histories_path, :class => 'btn btn-warning' %>
+      </div>
     <%end%>
-
-
-  <%#= simple_form_for @tables, :url => history_path, :method => :get  |f| %>
-<!--    <h3>Введите номер вашего столика:</h3>-->
-<!--    <p>-->
-      <%#= f.input :id, as: :number, :label => 'Номер столика' %>
-<!--    </p>-->
-<!--    <p class="text-center">-->
-      <%#= f.submit 'Заказать', :class => 'btn btn-warning' %>
-<!--    </p>-->
-  <%# end %>
   </div>
 </div>

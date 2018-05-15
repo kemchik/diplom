@@ -24,10 +24,10 @@ Rails.application.routes.draw do
   end
 
 
-  get '/history/:id', to: 'history#create'
+  get '/histories/', to: 'histories#create'
 
   resources :orders
-  resource :history
+  resource :histories
   resources :customers
 
   resources :customers do

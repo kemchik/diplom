@@ -1,0 +1,17 @@
+<div class='row forms'>
+  <div class='col-md-offset-4 col-md-4'>
+
+    <h3>Введите количество порций</h3>
+
+    <%= simple_form_for @order, url: product_orders_path(@product, @order) do |f| %>
+
+      <p>
+        <%= f.input :amount, input_html: { class: 'input2' }%>
+      </p>
+
+      <p>
+        <%= f.submit 'OK',  :class => 'btn btn-warning ok' %>
+      </p>
+    <% end %>
+  </div>
+</div>
