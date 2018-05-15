@@ -88,7 +88,7 @@
                 <div class="price">
                 <h4><%= product.price %> руб.</h4>
                 </div>
-                <button class="btn btn-warning"><%= link_to 'В заказ', new_customer_order_path(product) %></button>
+                <button class="btn btn-warning"><%= link_to 'В заказ', new_product_order_path(product) %></button>
                 <% if user_signed_in? %>
                   <% if current_user.admin? %>
                       <button class="btn btn-dark">
@@ -111,6 +111,5 @@
           <% end %>
         <% end %>
     <% end %>
-
   </div>
 </div>

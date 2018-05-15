@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
       else
         session[:orders] ||= []
         session[:orders] << {product_id: @product.id, amount: order_params[:amount] }
-        redirect_to category_products_path(@product.category_id)
+        redirect_to root_path;
       end
     end
 
@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
         @order = Order.find(params[:id])
         @order.destroy
       else
-        session[:orders].reject!{|order| order[:product_id] == params[:product_id]}
+        session[:orders].reject!{|order| order[:order_id] == params[:order_id]}
       end
       redirect_to orders_path
     end

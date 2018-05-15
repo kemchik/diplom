@@ -1,3 +1,25 @@
 .zakaz{
   color: white;
 }
+
+.zakaz h1{
+  text-align: center;
+}
+
+.rezalt{
+  text-align: center;
+  font-style: italic;
+}
+
+.orders_dishe{
+  position: relative;
+}
+
+.orders_dishe .close{
+  color: #fffffe;
+  font-size: 30px;
+  right: 4%;
+  title: 'Удалить';
+  cursor: pointer;
+  z-index: 20;
+}

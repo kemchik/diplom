@@ -1,0 +1,27 @@
+.comments{
+  color: white;
+}
+
+.comments li{
+  margin-top: 3%;
+  margin-left: 3%;
+  font-size: 1.5em;
+}
+
+.comments li:hover, .comments li a:hover {
+  color: #f0ad4e;
+}
+
+.comments form{
+  margin-bottom: 10%;
+  margin-top: 7%;
+}
+
+.comments .ingredients{
+  font-style: italic;
+  text-align: left;
+}
+
+.comments .price{
+  font-size: 1.4em;
+}

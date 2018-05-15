@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+
   resources :admin
 
   resources :admin_products

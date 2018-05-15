@@ -1,81 +1,9 @@
-.slide{
-  width: 100%;
-}
-
-.list-group{
-  background-color: #fff3b1;
-}
-
-.list-group h3{
-  color: #000;
-}
-
-.list-group p{
-  color: #000;
-}
-.list-group-item{
-  background-color: #fff3b1;
-}
-
-.list-group-item a{
-  background-color: #fff3b1;
-  color: #0c1a1e;
-}
-
-.fon{
-  background-color: rgba(0, 0, 0, 0.7);;
-}
-
-button7 {
-  font-weight: 500;
-  font-size: 0.9em;
-  color: white;
-  text-decoration: none;
-  padding: .8em 1em calc(.8em + 3px);
-  border-radius: 3px;
-  background: rgb(64,199,129);
-  box-shadow: 0 -3px sandybrown inset;
-  transition: 0.2s;
-}
-
-.button7:hover { background: sandybrown; }
-
-.button7:active {
-  background: sandybrown;
-  box-shadow: 0 3px rgb(33,147,90) inset;
-}
 
 .image_prod{
   width: 95%;
   margin: 3%;
 }
 
-.button1 {
-  position: relative;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: -1px -1px #000;
-  user-select: none;
-  padding: .8em 2em;
-  outline: none;
-  background-color: #000;
-  background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
-  background-repeat: no-repeat;
-  background-size: 200% 100%, auto;
-  background-position: 200% 0, 0 0;
-  box-shadow: rgba(0,0,0,.3) 0 2px 5px;
-}
-
-.button1:active {
-  top: 1px;
-  box-shadow: none;
-}
-
-.button1:hover {
-  transition: .5s linear;
-  background-position: -200% 0, 0 0;
-}
 
 .backet{
   width: 100px;
@@ -130,29 +58,6 @@ button7 {
   font-size: inherit;
 }
 
-.button8{
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  padding: 1.5em 8em;
-  outline: none;
-  border-width: 2px 0;
-  border-style: solid none;
-  border-color: #FDBE33 #000 #D77206;
-  border-radius: 6px;
-  background: linear-gradient(#F3AE0F, #E38916) #E38916;
-  transition: 0.2s;
-}
-a.button8:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
-a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
-
-
-
-
-.save{
-  color: black;
-}
-
 .categories{
   background-color: rgba(0,0, 0, 0.7);
   padding: 0;
@@ -173,9 +78,7 @@ a.button8:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
   color: white;
   font-size: 2em !important;
 }
-hr{
-  margin: 0;
-}
+
 
 .categories ul {
   width: 100%;
@@ -197,9 +100,6 @@ hr{
   background-color: #0c1a1e;
 }
 
-.row{
-  margin-left: 0;
-}
 
 .rowfordish{
   height: auto;
@@ -385,20 +285,12 @@ font-size: 2.5em;
   margin-top: 3%;
 }
 
-a{
-  color: white;
-}
-
 .btn-dark{
   background-color: #0c1a1e;
   color: white;
   font-size: 0.5em;
 }
 
-hr{
-  border-top-color: rgba(79, 79, 79, 0.97);
-
-}
 
 .podobr_zakaz{
   text-align: right;

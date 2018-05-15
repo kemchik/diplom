@@ -50,6 +50,10 @@ body{
   width: 60%;
 }
 
+.fon{
+  background-color: rgba(9, 3, 10, 0.8);
+}
+
 .container{
   padding-left: 0;
   padding-right: 0;
@@ -76,10 +80,16 @@ body{
   background-color: rgba(0, 0, 0, 0.7);
   padding-top: 3%;
   padding-bottom: 5%;
+  color: white;
 }
 
-.forms .container{
-  margin-bottom: 2%;
+.forms>div{
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.forms p{
+  text-align: center;
 }
 
 .input {
@@ -93,11 +103,20 @@ body{
 }
 
 a{
-  color: whites;
+  color: white;
 }
 
  a:hover,  a:active{
   text-decoration: none;
   color: white;
+}
+
+hr{
+  border-top-color: rgba(79, 79, 79, 0.97);
+  margin: 0;
+}
+
+.row{
+  margin-left: 0;
 }
 
