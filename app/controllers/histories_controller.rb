@@ -3,14 +3,15 @@ class HistoriesController < ApplicationController
 
   def index
     if user_signed_in?
-      @order = Order.where(user_id: current_user, status: 'processing')
+      @order_process = Order.where(user_id: current_user, status: 'processing')
+      @order_bought = Order.where(user_id: current_user, status: 'bought')
     else
       if session[:orders].blank?
-        @order
+        @order_process
       else
-        @order = []
+        @order_process = []
         session[:orders].each do |order|
-          @order << Order.new( product_id: order['product_id'], amount: order['amount']) end
+          @order_process << Order.new( product_id: order['product_id'], amount: order['amount']) end
       end
     end
   end
@@ -40,8 +41,8 @@ class HistoriesController < ApplicationController
       end
     end
     # make table params
-    @order.update_all(table_id: @table.id, status: 'processing')
-    redirect_to root_path
+    @order.update_all(status: 'processing')
+    redirect_to histories_path
   end
 
   def update

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   get 'admin/home'
   devise_for :admins
   get 'admin_products/index'
@@ -24,10 +22,10 @@ Rails.application.routes.draw do
   end
 
 
-  get '/histories/', to: 'histories#create'
+  # get '/histories/', to: 'histories#create'
 
   resources :orders
-  resource :histories
+  resources :histories
   resources :customers
 
   resources :customers do
