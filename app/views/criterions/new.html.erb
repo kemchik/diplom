@@ -1,0 +1,43 @@
+<div class="forms criteria_new">
+  <%= simple_form_for @criterions, post: criterions_path do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Введите белки</h4>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :proteins, input_html: { class: 'input2' }%>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Введите углеводы</h4>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :carbohydrates, input_html: {class: 'input2'} %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Введите жиры</h4>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :grease, input_html: {class: 'input2'} %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Введите калории</h4>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :calories, input_html: {class: 'input2'} %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+

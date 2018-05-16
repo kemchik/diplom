@@ -1,6 +1,4 @@
 class HistoriesController < ApplicationController
-
-
   def index
     if user_signed_in?
       @order_process = Order.where(user_id: current_user, status: 'processing')

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :histories
   resources :customers
+  resources :criterions
 
   resources :customers do
     resources :orders
