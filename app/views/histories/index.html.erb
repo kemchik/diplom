@@ -1,0 +1,55 @@
+<div style="min-height: 40em" class="zakaz">
+  <div class="row>">
+    <div class="col-md-5">
+
+    </div>
+    <div class="col-md-7">
+      <% sum_price = 0 %>
+      <% sum_grease = 0 %>
+      <% sum_proteins = 0 %>
+      <% sum_uglevodov = 0  %>
+      <% sum_calories = 0 %>
+      <h2 class="history_orders">История заказов</h2>
+            <div class="blockfororders">
+              <div class="time">
+                <%= @order_process.first.created_at.asctime %>
+              </div>
+              <div class="row">
+                <% @order_process.each do |order|%>
+                  <div class="day col-md-3">
+                    <%= image_tag(order.product.image_url, class: 'image_prod') %>
+                    <h3><%= order.product.name %></h3>
+                    <div class="row count_portion">
+                     <div class="col-md-9">
+                       <h4>Количество порций</h4>
+                     </div>
+                      <div class="col-md-2">
+                        <h4><%= order.amount %></h4>
+                      </div>
+                    </div>
+                    <% sum_price += order.product.price * order.amount %>
+                    <% sum_calories += order.product.calories * order.amount %>
+                    <% sum_grease += order.product.grease * order.amount %>
+                    <% sum_proteins += order.product.proteins * order.amount %>
+                    <% sum_uglevodov += order.product.carbohydrates * order.amount %>
+                  </div>
+                <% end %>
+              </div>
+              <div class="row status">
+                <div class="col-md-2">
+                  <h4>Cтатус:</h4>
+                </div>
+                <div class="col-md-2">
+                  <h4>Обрабатывается</h4>
+                </div>
+                <div class="col-md-offset-4 col-md-2" >
+                  <h4>Стоимость</h4>
+                </div>
+                <div class="col-md-2">
+                  <h4><%= sum_price %> руб.</h4>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+</div>

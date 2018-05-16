@@ -1,0 +1,55 @@
+.blockfororders{
+  margin-top: 5%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.time{
+  width: 100%;
+  background-color: #d58512;
+  text-align: center;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  line-height: 100%;
+  border-radius: 7%;
+}
+
+
+.day{
+  background-color: white;
+  padding: 2%;
+  margin: 1%;
+  border-radius: 3%;
+  color: black;
+  text-align: center;
+}
+
+.day h3{
+  font-size: 1.2em;
+}
+
+.day h4{
+  font-size: 0.8em;
+}
+
+.count_portion>div{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.status{
+  background-color: white;
+  margin-right: 1%;
+  color: black;
+  border-radius: 2%;
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+.status h4{
+  font-size: 1.3em;
+}
+
+.history_orders{
+  text-align: center;
+}
