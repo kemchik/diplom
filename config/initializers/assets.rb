@@ -7,7 +7,7 @@ Rails.application.config.assets.precompile += %w( orders.scss )
 Rails.application.config.assets.precompile += %w( application.js )
 Rails.application.config.assets.precompile += %w( histories.scss )
 Rails.application.config.assets.precompile += %w( comments.scss )
-
+Rails.application.config.assets.precompile += %w( criterions.scss )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path

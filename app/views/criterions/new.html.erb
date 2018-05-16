@@ -37,7 +37,38 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <label class="container_checkbox ">Только вегетарианские блюда
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-offset-1 col-md-3">
+        <label class="container_checkbox ">Максимальная стоимость
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="container_checkbox ">Минимальная стоимость
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="col-md-offset-1 col-md-3">
+        <label>Цена</label>
+        <input class ='input_price' %>
+
+      </div>
+    </div>
   </div>
+    <p>
+      <%= f.submit 'OK', :class => 'btn btn-warning ok' %>
+    </p>
   <% end %>
 </div>
 
