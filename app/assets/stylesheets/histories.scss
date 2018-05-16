@@ -53,3 +53,24 @@
 .history_orders{
   text-align: center;
 }
+
+.info_about_yourself{
+  //background-color: #8f8f8f;
+  border-radius: 3%;
+  border: solid white 1px;
+  margin: 3%;
+  margin-top: 19%;
+
+}
+
+.buttons_for_changes_current_user_info{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.buttons_for_changes_current_user_info button{
+  font-size: 0.7em;
+  //padding: 5%;
+  border-color: #d2802c !important;
+
+}
