@@ -1,4 +1,5 @@
 User.create email: 'admin@gmail.com', password: '123456', admin: true
+User.create email: 'staff@gmail.com', password: '123456', staff: true
 Table.create number: 1
 Table.create number: 2
 Table.create number: 3
