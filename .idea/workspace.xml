@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64f88038-8c9e-43a0-9f24-7c705c8db1fd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/histories/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/histories/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="cours_shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +17,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/cours_shop@db_drop__cours_shop.coverage" NAME="db:drop: cours_shop Coverage Results" MODIFIED="1487508591803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cours_shop" />
-    <SUITE FILE_PATH="coverage/cours_shop_master@Development__cours_shop.rcov" NAME="Development: cours_shop Coverage Results" MODIFIED="1526465877221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cours_shop" />
+    <SUITE FILE_PATH="coverage/cours_shop_master@Development__cours_shop.rcov" NAME="Development: cours_shop Coverage Results" MODIFIED="1526582663972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cours_shop" />
     <SUITE FILE_PATH="coverage/cours_shop@Development__cours_shop.coverage" NAME="Development: cours_shop Coverage Results" MODIFIED="1493495726500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cours_shop" />
     <SUITE FILE_PATH="coverage/cours_shop@routes__cours_shop.coverage" NAME="routes: cours_shop Coverage Results" MODIFIED="1491242418052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cours_shop" />
   </component>
@@ -31,38 +29,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="20180517182433_add_staff_to_user.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20180517182433_add_staff_to_user.rb">
+      <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="255">
+              <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20180516101605_add_user_to_criterion.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20180516101605_add_user_to_criterion.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="46" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20170405133832_add_admin_to_users.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20170405133832_add_admin_to_users.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="39" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="39" />
+            <state relative-caret-position="190">
+              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -136,14 +116,12 @@
         <option value="$PROJECT_DIR$/db/migrate/20180515204027_add_user_id_and_order_id_to_history.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180515203722_add_table_id_to_order.rb" />
         <option value="$PROJECT_DIR$/app/views/orders/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/models/critery.rb" />
         <option value="$PROJECT_DIR$/app/controllers/histories_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/criteria/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/criteria_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180516082352_change_criteria.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180516090309_change_name_criteria_on_criterions.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
@@ -157,6 +135,8 @@
         <option value="$PROJECT_DIR$/app/views/histories/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20180517182433_add_staff_to_user.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -206,7 +186,26 @@
             <path>
               <item name="cours_shop-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="cours_shop-master" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cours_shop-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cours_shop-master" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cours_shop-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cours_shop-master" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cours_shop-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cours_shop-master" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -605,12 +604,12 @@
       <workItem from="1526069546653" duration="824000" />
       <workItem from="1526109995381" duration="62846000" />
       <workItem from="1526405556693" duration="25115000" />
-      <workItem from="1526580611824" duration="1821000" />
+      <workItem from="1526580611824" duration="3931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="502803000" />
+    <option name="totallyTimeSpent" value="504913000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -625,16 +624,17 @@
     <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7745665" visible="true" weight="0.36212122" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49721116" weight="0.32713178" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49721116" weight="0.32605305" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.536255" side_tool="true" weight="0.42170542" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.2652106" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47808766" weight="0.54134166" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4621514" weight="0.3978159" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7745665" visible="true" weight="0.36212122" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.35569423" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24940239" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4621514" visible="true" weight="0.3978159" />
       <window_info id="Favorites" order="2" sideWeight="0.22543353" side_tool="true" weight="0.2932271" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46374503" weight="0.23088923" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -644,7 +644,6 @@
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32901135" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.35569423" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1063,24 +1062,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180514174207_create_criteria.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="28" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -1207,6 +1192,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180517182433_add_staff_to_user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1214,10 +1206,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="255">
+          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
         </state>
       </provider>
     </entry>
