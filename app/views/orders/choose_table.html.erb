@@ -1,0 +1,16 @@
+<div class="row form">
+  <div class='col-md-offset-4 col-md-4'>
+
+    <%= simple_form_for @table, url: orders_path do |f| %>
+
+      <p>
+        <%= f.input :table_id, collection: @tables, as: :grouped_select, group_method: :tables, input_html: {class: 'input2'} %>
+
+      </p>
+
+      <p>
+        <%= f.submit 'OK', :class => 'btn btn-warning ok' %>
+      </p>
+    <% end %>
+  </div>
+</div>

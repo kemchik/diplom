@@ -23,8 +23,16 @@ Rails.application.routes.draw do
 
 
   # get '/histories/', to: 'histories#create'
+  resources :tables
 
-  resources :orders
+  resources :orders do
+
+    # post 'set_table/:table_id', action: :set_table
+    collection do
+      post 'set_table/:table_id', action: 'set_table'
+      post :choose_table
+    end
+  end
   resources :histories
   resources :customers
   resources :staffs
@@ -47,6 +55,7 @@ Rails.application.routes.draw do
   resources :products do
     collection { post :import }
   end
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

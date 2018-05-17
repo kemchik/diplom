@@ -12,7 +12,7 @@
         <li><%= link_to 'О нас', office_index_path %></li>
         <% if user_signed_in? %>
           <% if current_user.staff %>
-              <li><%= link_to 'Заказы', histories_path %></li>
+              <li><%= link_to 'Заказы', staffs_path %></li>
               <% else %>
               <% if !current_user.admin %>
                 <li><%= link_to 'Кабинет', histories_path %></li>

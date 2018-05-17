@@ -2,8 +2,7 @@ class OrdersController < ApplicationController
   before_action :load_product, only: [:new, :create]
 
     def index
-      @tables = Table.all
-      @history = History.new
+
       if user_signed_in?
         @order = Order.where(user_id: current_user, status: nil)
       else
@@ -35,6 +34,16 @@ class OrdersController < ApplicationController
         session[:orders] << {product_id: @product.id, amount: order_params[:amount] }
         redirect_to root_path;
       end
+    end
+
+    def choose_table
+      @tables = Table.all
+    end
+
+    def set_table
+      orders_ralation = Order.where(user_id: current_user, status: nil)
+      orders_ralation.update_all(table_id: params[:table_id])
+      redirect_to orders_path
     end
 
     def destroy
