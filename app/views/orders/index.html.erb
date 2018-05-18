@@ -11,9 +11,9 @@
   <% @order.each do |order| %>
 
       <div class="row orders_dishe">
-        <span class="close" title="Удалить">&times;</span>
+        <span class="closes" title="Удалить">&times;</span>
         <div class='col-md-4'>
-          <%= image_tag(order.product.image_url, class: 'image_prod') %>
+          <%= link_to (image_tag order.product.image_url), product_comments_path(order.product.id), class: 'image_prod' %>
         </div>
         <div class="col-md-8">
           <div>
@@ -41,18 +41,12 @@
             </div>
           </div>
 
-
-          <div class="col-xs-6 buy text-center buy7">
-            <br>
-            <br>
-            <%= link_to 'Просмотреть', product_comments_path(order.product.id) %>
-          </div>
 <!--          <div class="col-xs-3 buy2">-->
 <!--            <br>-->
             <%# if user_signed_in? %>
                 <%#= link_to 'Удалить', order_path(order), method: :delete, data: {confirm: 'Are you sure?'} %>
                 <%# else %>
-            <%#= link_to 'Удалить', order_path(order.product.id), method: :delete, data: {confirm: 'Are you sure?'} %>
+            <%#= link_to "&times;", order_path(order.product.id), method: :delete, data: {confirm: 'Are you sure?'} %>
             <%#end %>
 <!--          </div>-->
           <% sum += sum_one %>
@@ -84,18 +78,18 @@
     </div>
   </div>
   <div class="row rezalt">
-    <div class="col-md-offset-8 col-md-4 ">
+    <div class="col-md-4">
+      <%= link_to 'Указать стол', orders_path, :class => 'btn btn-dark choose_table'%>
+    </div>
+    <div class="col-md-offset-4 col-md-4 ">
      <h2>Стоимость</h2>
       <p><%= sum.round(2) %> руб.</p>
     </div>
   </div>
 
-
-  <%= link_to 'Указать стол', choose_table_orders_path, :class => 'btn btn-warning choose_table'%>
-
     <% if @order != nil %>
       <div class="col-md-offset-5 col-md-2">
-        <%= link_to 'Заказать', histories_url, :class => 'btn btn-warning' %>
+        <%= link_to 'Заказать', histories_url, :class => 'btn btn-warning button_make_order' %>
       </div>
     <%end%>
   </div>

@@ -49,12 +49,23 @@
   <hr>
   <div class="container">
     <% @one.each do |comment| %>
-        <div class="col-md-11" >
-          <div class="col-xs-12" >
-            <h4 style="color: crimson"><%= comment.name %></h4>
+        <div class="col-md-11 all_comments" >
+          <div class="col-md-12 " >
+            <div class="row name_rating">
+              <div class="col-md-2">
+                <h4 style="color: crimson"><%= comment.name %></h4>
+              </div>
+              <div class="col-md-4 person_rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
             <h5><%= comment.created_at.asctime%> </h5>
           </div>
-        <div class="col-xs-12" >
+        <div class="col-md-12" >
         <%= comment.comment %>
         </div>
         </div>
@@ -63,7 +74,7 @@
   </div>
 
 
-  <div class="col-md-5 col-md-offset-4">
+  <div class="col-md-5 col-md-offset-4 form_for_comments">
       <%= simple_form_for [ @product, @comments], :url => product_comments_path, :method => :post do |f| %>
       <h3>Введите ваш отзыв:</h3>
       <p>
@@ -72,9 +83,17 @@
       <p>
         <%= f.input :comment, as: :text, :label=>'Отзыв'  %>
       </p>
-      <p class="text-center">
+      <div class="rating">
+        <h4>Оцените блюдо</h4>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <div class="save_comment">
         <%= f.submit 'Save', :class => 'btn btn-warning' %>
-      </p>
+      </div>
   <% end %>
   </div>
 </div>

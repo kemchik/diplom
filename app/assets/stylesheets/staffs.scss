@@ -1,0 +1,70 @@
+.staff{
+  color: white;
+}
+
+.one_order{
+  margin-top: 3%;
+  padding-right: 3%;
+  margin-right: -1.5%;
+}
+
+.order_time{
+  position: absolute;
+  left: 100%;
+  background-color: #d58512;
+  padding: 7%;
+  border-radius: 4%;
+  bottom: 0;
+}
+
+.table_place{
+  background-color: #d58512;
+  border-radius: 3%;
+  text-align: center;
+  position: relative;
+}
+
+.table_place h4{
+  font-size: 0.8em;
+}
+
+.table_place h2{
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.dishes_in_orders{
+  border-radius: 3%;
+  background-color: #EFEFEF;
+  color: #0c1a1e;
+  position: relative;
+  margin-bottom: 1%;
+}
+
+
+.dishes_in_orders h3{
+ font-size: 1.1em;
+  padding-right: 0;
+  padding-left: 2%;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.close{
+  font-size: 1.7em !important;
+  position: absolute;
+  right: -30%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons_in_staff{
+  margin-top: 3%;
+}
+
+.buttons_in_staff button{
+  font-size: 0.7em;
+  border-color: #d58512;
+}

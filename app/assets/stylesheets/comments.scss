@@ -25,3 +25,39 @@
 .comments .price{
   font-size: 1.4em;
 }
+
+.rating{
+  text-align: center;
+}
+
+.comments span{
+  color: #dededd;
+}
+.rating span{
+  font-size: 1.5em;
+}
+
+.save_comment{
+  text-align: center;
+  margin-top: 7%;
+}
+
+.person_rating{
+  padding-top: 1.3% !important;
+}
+
+.name_rating>div{
+  padding: 0;
+}
+
+.all_comments{
+  margin-top: 3%;
+}
+
+.form_for_comments{
+  margin-top: 5%;
+}
+
+.checked{
+  color: #d58512 !important;
+}

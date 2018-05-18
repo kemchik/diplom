@@ -4,6 +4,8 @@ class OrdersController < ApplicationController
     def index
 
       if user_signed_in?
+        @table = Table.new
+        @tables = Table.all
         @order = Order.where(user_id: current_user, status: nil)
       else
         if session[:orders].blank?

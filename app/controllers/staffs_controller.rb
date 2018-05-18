@@ -1,6 +1,6 @@
 class StaffsController < ApplicationController
   def index
-    @histories = History.where(status: 'processing')
+    # @histories = History.where(status: 'processing')
   end
 
   def show
