@@ -65,8 +65,9 @@
 .categories{
   background-color: rgba(0,0, 0, 0.7);
   padding: 0;
-  position: relative;
+  position: fixed;
   padding-bottom: 100%;
+  text-align: center;
 }
 
 .categories a {
@@ -111,6 +112,7 @@
 
 .carcasfordish{
   height: 100%;
+  margin-bottom: 2%;
 }
 
 .categoriesName{
@@ -335,4 +337,13 @@ font-size: 2.5em;
 
 .check_vegan .checkmark{
   left: 19%;
+}
+
+.criterions{
+  margin-top: 20%;
+  transform: translateY(-50%);
+}
+
+.criteria_new p input{
+  margin-top: 5%;
 }

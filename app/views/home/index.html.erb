@@ -4,7 +4,7 @@
       <li class="namecategories">Категогрии</li>
       <hr>
       <% @category.each do |category| %>
-      <a href = '#<%category.name%>'><li><%= category.name %>
+      <a href = '#<%= category.id%>'><li><%= category.name %>
           <% if user_signed_in? %>
           <% if current_user.admin? %>
           <br>
@@ -41,13 +41,13 @@
       <% end %>
     <% end %>
   </div>
-  <div class="formForCountPerson">
-    <span class="close">&times;</span>
-    <h5>Введите количество порций</h5>
-    <input type="number">
-    <button class="btn btn-warning">OK</button>
-  </div>
-  <div class="dishes col-md-10">
+<!--  <div class="formForCountPerson">-->
+<!--    <span class="close">&times;</span>-->
+<!--    <h5>Введите количество порций</h5>-->
+<!--    <input type="number">-->
+<!--    <button class="btn btn-warning">OK</button>-->
+<!--  </div>-->
+  <div class="dishes col-md-offset-2 col-md-10">
     <div class="row">
       <div class="col-md-6">
         <label class="container_checkbox ">Только вегетарианские блюда
@@ -61,7 +61,7 @@
     </div>
     <% @category.each do |category| %>
       <% @product = category.products %>
-      <h3 class="categoriesName"><%= category.name %></h3>
+      <h3 class="categoriesName" id="<%= category.id %>"><%= category.name %></h3>
       <div class="row rowfordish">
           <% @product.each do |product| %>
             <div class = 'carcasfordish col-md-4'>
