@@ -30,7 +30,7 @@ Rails.application.routes.draw do
     # post 'set_table/:table_id', action: :set_table
     collection do
       post 'set_table/:table_id', action: 'set_table'
-      post :choose_table
+      get :choose_table
     end
   end
   resources :histories

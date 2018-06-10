@@ -9,7 +9,7 @@
 
 
       <ul class="nav navbar-nav">
-        <li><%= link_to 'О нас', office_index_path %></li>
+        <li><%= link_to 'О нас', root_path %></li>
         <% if user_signed_in? %>
           <% if current_user.staff %>
               <li><%= link_to 'Заказы', staffs_path %></li>

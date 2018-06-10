@@ -1,6 +1,8 @@
 class HistoriesController < ApplicationController
   def index
     if user_signed_in?
+      order_nil = Order.where(user_id: current_user, status: nil)
+      order_nil.update_all(status: 'processing')
       @order_process = Order.where(user_id: current_user, status: 'processing')
       @order_bought = Order.where(user_id: current_user, status: 'bought')
     else

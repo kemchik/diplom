@@ -1,10 +1,11 @@
-<div class="row form">
+<div class="row forms">
   <div class='col-md-offset-4 col-md-4'>
-
-    <%= simple_form_for @table, url: orders_path do |f| %>
+<!--    icon(:url => url_for(:controller => "admin/projects", :action => "edit", :id => @project),-->
+<!--    :type => :edit)-->
+    <%= simple_form_for @table, url: 'set_table/:table_id', action: 'set_table' do |f| %>
 
       <p>
-        <%= f.input :table_id, collection: @tables, as: :grouped_select, group_method: :tables, input_html: {class: 'input2'} %>
+        <%= f.input :id, collection: @tables.ids,label: 'Выберете стол', input_html: {class: 'input2'} %>
 
       </p>
 

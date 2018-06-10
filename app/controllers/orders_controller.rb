@@ -20,6 +20,11 @@ class OrdersController < ApplicationController
     end
 
     def create
+      if !@table.empty?
+        orders_ralation = Order.where(user_id: current_user, status: nil)
+        orders_ralation.update_all(table_id: @table.id)
+        redirect_to orders_path;
+      else
       if user_signed_in?
         @order = @product.orders.build(order_params)
         @order.user = current_user
@@ -33,10 +38,12 @@ class OrdersController < ApplicationController
         session[:orders] << {product_id: @product.id, amount: order_params[:amount] }
         redirect_to root_path;
       end
+        end
     end
 
     def choose_table
       @tables = Table.all
+      @table = Table.new
     end
 
     def set_table
@@ -63,5 +70,6 @@ class OrdersController < ApplicationController
 
   def load_product
     @product = Product.find(params[:product_id])
+    # @table = Table.find(params[:table_id])
   end
 end
